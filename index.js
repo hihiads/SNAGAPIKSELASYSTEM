@@ -132,6 +132,17 @@ client.on('messageCreate', async message => {
     }
   }
 });
+const express = require("express");
+const app = express()
+
+app.listen(300, () => {
+  console.log("Project is running!");
+})
+
+app.get("/", (req, res) => {
+  res.send("Hello world!");
+})
+
 
 
 client.login(process.env.token);
